@@ -11,13 +11,14 @@ export const Header = styled.header`
   }
 `
 export const Image = styled.img`
-  z-index: 1000;
+  /* z-index: 1000; */
   align-self: center;
   height: 6.5em;
   @media (min-width: 500px) { height: 8em; }
   @media (min-width: 768px) { height: 12em; }
 `
 export const H1 = styled.h1`
+  z-index: -1;
   align-self: center;
   margin-top: -26px;
   margin-bottom: 0;

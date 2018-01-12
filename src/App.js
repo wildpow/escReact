@@ -5,7 +5,7 @@ import { Route } from 'react-router-dom';
 
 import Logo from './Components/LogoComponent/Logo.js';
 import './main.css';
-import Nav from './Components/Nav.js';
+import Nav from './Components/NavComponent/Nav.js';
 import HomeComponent from './Components/HomeComponent/Home.js';
 
 
