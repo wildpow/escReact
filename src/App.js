@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Route } from 'react-router-dom';
+
 import Logo from './Components/LogoComponent/Logo.js';
 import './main.css';
-import Nav from './Components/Nav.js'
+import Nav from './Components/Nav.js';
+import HomeComponent from './Components/HomeComponent/Home.js';
+
 
 const Container = styled.div`
   margin-left: auto;
@@ -17,9 +20,7 @@ const Container = styled.div`
   @media (min-width: 768px) { width: 750px; }
 `
 
-function HomeComponent() {
- return <h1>This is the Home Component</h1>
-}
+
 function AboutComponent() {
   return <h2>This is the About Component</h2>
 }
@@ -40,17 +41,14 @@ class App extends Component {
           transitionEnter={false}
           transitionLeave={false}
         >
-          <Logo />
-       
-        
+          <Logo/>
+         
           <div>
-           <Nav/>
-
+          <Nav/>
             <Route path="/" component={HomeComponent} exact/>
             <Route path="/about" component={AboutComponent} />
             <Route path="/products" component={ProductsComponent} />
             <Route path="/blog" component={BlogComponent} />
-
           </div>
           </ReactCSSTransitionGroup>
       </Container>
